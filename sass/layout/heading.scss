@@ -1,0 +1,70 @@
+.main-container {
+  background-image: linear-gradient(
+      to right top,
+      rgba(2, 2, 2, 0.8),
+      rgba(2, 2, 2, 0.2)
+    ),
+    url(../img/main3.jpg);
+  width: 100vw;
+  height: 75vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s;
+
+  &__items {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 1.8rem;
+    position: relative;
+  }
+
+  &__heading::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(0, 70, 201);
+    left: -2rem;
+  }
+
+  &__hook {
+    font-size: 3rem;
+    color: #fff;
+    width: 70%;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked + &__checkbox-label {
+    background-color: #fff;
+  }
+
+  &__checkbox-label {
+    display: inline-block;
+    width: 4rem;
+    height: 3.5px;
+    background-color: rgba(255, 255, 255, 0.404);
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &__checkbox-label-container {
+    position: absolute;
+    left: 5%;
+    bottom: 3rem;
+  }
+}

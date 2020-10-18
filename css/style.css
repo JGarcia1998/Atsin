@@ -71,7 +71,9 @@ body {
     left: -2.5rem;
     transform: translateY(-50%);
     border: 3px solid white;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 1s;
+    outline: none; }
   .sidebar__label::after {
     content: "";
     position: absolute;
@@ -85,5 +87,76 @@ body {
     border-radius: 50%;
     transition: 0.5s;
     opacity: 0; }
+  .sidebar__label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 3px;
+    background-color: white; }
   .sidebar__input:checked ~ .sidebar__label::after {
     opacity: 1; }
+  .sidebar__input:checked ~ .sidebar__label::before {
+    opacity: 0; }
+
+.main-container {
+  background-image: linear-gradient(to right top, rgba(2, 2, 2, 0.8), rgba(2, 2, 2, 0.2)), url(../img/main3.jpg);
+  width: 100vw;
+  height: 75vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s; }
+  .main-container__items {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%); }
+  .main-container__heading {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 1.8rem;
+    position: relative; }
+  .main-container__heading::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    background-color: #0046c9;
+    left: -2rem; }
+  .main-container__hook {
+    font-size: 3rem;
+    color: #fff;
+    width: 70%; }
+  .main-container__checkbox {
+    display: none; }
+  .main-container__checkbox:checked + .main-container__checkbox-label {
+    background-color: #fff; }
+  .main-container__checkbox-label {
+    display: inline-block;
+    width: 4rem;
+    height: 3.5px;
+    background-color: rgba(255, 255, 255, 0.404);
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s; }
+  .main-container__checkbox-label-container {
+    position: absolute;
+    left: 5%;
+    bottom: 3rem; }
+
+.h3-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 5rem;
+  font-weight: 300; }
+
+.heading-span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #444343; }

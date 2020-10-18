@@ -71,6 +71,8 @@
     transform: translateY(-50%);
     border: 3px solid white;
     cursor: pointer;
+    transition: all 1s;
+    outline: none;
   }
 
   &__label::after {
@@ -88,7 +90,22 @@
     opacity: 0;
   }
 
+  &__label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 3px;
+    background-color: white;
+  }
+
   &__input:checked ~ &__label::after {
     opacity: 1;
+  }
+
+  &__input:checked ~ &__label::before {
+    opacity: 0;
   }
 }
