@@ -15,43 +15,45 @@
 .section__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, minmax(1fr, min-content));
-  grid-gap: 2rem 2rem;
-  grid-template-areas:
-    "grid-item1 grid-item2 grid-item3"
-    "grid-item1 grid-item2 ."
-    ". grid-item2 ."
-    "grid-item4 . .";
+  grid-template-rows: repeat(6, 10vw);
+  grid-gap: 2rem;
 }
 
 .section {
+  &__item-1 {
+    background-color: #fff;
+    padding: 3rem 4rem;
+    box-shadow: 0 1rem 1rem rgba(black, 0.1);
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 1;
+  }
   &__item-2 {
     background-color: #fff;
     box-shadow: 0 1rem 1rem rgba(black, 0.1);
-    grid-area: grid-item2;
-  }
-
-  &__item-4 {
-    background-color: #fff;
-    box-shadow: 0 1rem 1rem rgba(black, 0.1);
-    grid-area: grid-item4;
+    grid-row: 1 / span 4;
+    grid-column: 2 / span 1;
   }
 
   &__item-3 {
     background-color: #fff;
     box-shadow: 0 1rem 1rem rgba(black, 0.1);
-    grid-area: grid-item3;
+    grid-row: 1 / span 2;
+    grid-column: 3 / span 1;
+
     padding: 3rem 4rem;
+  }
+
+  &__item-4 {
+    background-color: #fff;
+    box-shadow: 0 1rem 1rem rgba(black, 0.1);
+    grid-row: 4 / span 3;
+    grid-column: 1 / span 1;
   }
 
   &__img-2 {
     width: 100%;
-  }
-  &__item-1 {
-    background-color: #fff;
-    padding: 3rem 4rem;
-    box-shadow: 0 1rem 1rem rgba(black, 0.1);
-    grid-area: grid-item1;
+    object-fit: cover;
+    max-height: 50%;
   }
 
   &__btn {
@@ -88,6 +90,13 @@
 
   &__info-2-container {
     padding: 3rem 3rem;
+  }
+
+  &__info-p {
+    width: 80%;
+    margin: 3rem auto;
+    font-size: 1.4rem;
+    color: inherit;
   }
 
   &__info:first-of-type::before {
