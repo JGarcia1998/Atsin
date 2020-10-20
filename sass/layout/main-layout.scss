@@ -14,9 +14,10 @@
 
 .section__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 10vw);
+  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+  grid-template-rows: repeat(auto-fill, 10vh);
   grid-gap: 2rem;
+  margin-bottom: 10rem;
 }
 
 .section {
@@ -26,12 +27,14 @@
     box-shadow: 0 1rem 1rem rgba(black, 0.1);
     grid-row: 1 / span 3;
     grid-column: 1 / span 1;
+    color: rgb(53, 53, 53);
   }
   &__item-2 {
     background-color: #fff;
     box-shadow: 0 1rem 1rem rgba(black, 0.1);
     grid-row: 1 / span 4;
     grid-column: 2 / span 1;
+    color: rgb(53, 53, 53);
   }
 
   &__item-3 {
@@ -39,7 +42,7 @@
     box-shadow: 0 1rem 1rem rgba(black, 0.1);
     grid-row: 1 / span 2;
     grid-column: 3 / span 1;
-
+    color: rgb(53, 53, 53);
     padding: 3rem 4rem;
   }
 
@@ -48,12 +51,66 @@
     box-shadow: 0 1rem 1rem rgba(black, 0.1);
     grid-row: 4 / span 3;
     grid-column: 1 / span 1;
+    color: rgb(53, 53, 53);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item-5 {
+    background-color: #fff;
+    box-shadow: 0 1rem 1rem rgba(black, 0.1);
+    grid-row: 5 / span 2;
+    grid-column: 2 / span 1;
+    padding: 3rem 4rem;
+    color: rgb(53, 53, 53);
+  }
+
+  &__item-6 {
+    box-shadow: 0 1rem 1rem rgba(black, 0.2);
+    grid-row: 3 / span 3;
+    grid-column: 3 / span 1;
+    overflow: none;
+    color: rgb(53, 53, 53);
+  }
+
+  &__item-7 {
+    background-color: #fff;
+    box-shadow: 0 1rem 1rem rgba(black, 0.1);
+    grid-row: 7 / span 2;
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    color: rgb(53, 53, 53);
+  }
+
+  &__item-8 {
+    background-color: #fff;
+    box-shadow: 0 1rem 1rem rgba(black, 0.1);
+    grid-row: 6 / span 3;
+    grid-column: 3 / span 1;
+    padding: 3rem 4rem;
+    color: rgb(53, 53, 53);
   }
 
   &__img-2 {
     width: 100%;
+    max-height: 20rem;
     object-fit: cover;
-    max-height: 50%;
+  }
+
+  &__img-6 {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: 100%;
+  }
+
+  &__img-7 {
+    display: inline-block;
+    min-width: 50%;
+    object-fit: cover;
+    max-height: 30rem;
   }
 
   &__btn {
@@ -64,6 +121,7 @@
     margin-bottom: 2rem;
     text-transform: uppercase;
     font-size: 1.2rem;
+    border-radius: 2px;
   }
 
   &__heading {
@@ -84,6 +142,14 @@
   &__info-2 {
     font-size: 1.4rem;
     width: 80%;
+    margin: 0 auto;
+    font-weight: 300;
+  }
+
+  &__info-7 {
+    font-size: 1.4rem;
+    width: 70%;
+
     margin: 0 auto;
     font-weight: 300;
   }
@@ -111,10 +177,9 @@
 }
 
 section {
-  background-color: rgb(228, 228, 228);
   padding: 0 5rem;
 }
 
-main {
+body {
   background-color: rgb(228, 228, 228);
 }
