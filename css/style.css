@@ -108,7 +108,7 @@ body {
 .main-container {
   background-image: linear-gradient(to right top, rgba(2, 2, 2, 0.8), rgba(2, 2, 2, 0.2)), url(../img/main3.jpg);
   width: 100vw;
-  height: 75vh;
+  height: 80vh;
   position: relative;
   background-size: cover;
   object-fit: cover;
@@ -126,14 +126,16 @@ body {
     color: #fff;
     font-weight: 300;
     margin-bottom: 1.8rem;
-    position: relative; }
+    position: relative;
+    display: inline-block; }
   .main-container__heading::before {
     content: "";
     width: 3px;
     height: 100%;
     position: absolute;
     background-color: #0046c9;
-    left: -2rem; }
+    left: -2rem;
+    transition: 0.5s; }
   .main-container__hook {
     font-size: 3rem;
     color: #fff;
@@ -170,7 +172,7 @@ body {
 .section__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-  grid-template-rows: repeat(auto-fill, 10vh);
+  grid-template-rows: repeat(auto-fit, 10vh);
   grid-gap: 2rem;
   margin-bottom: 10rem; }
 
@@ -241,7 +243,7 @@ body {
 
 .section__img-2 {
   width: 100%;
-  max-height: 20rem;
+  max-height: 25rem;
   object-fit: cover; }
 
 .section__img-6 {
@@ -254,7 +256,7 @@ body {
   display: inline-block;
   min-width: 50%;
   object-fit: cover;
-  max-height: 30rem; }
+  max-height: 25rem; }
 
 .section__btn {
   padding: 0.3rem 1rem;
@@ -317,7 +319,7 @@ body {
 
 .section2 {
   width: 100%;
-  height: 75vh;
+  height: 50rem;
   background-color: #fff;
   display: flex;
   margin-bottom: 20rem;
@@ -331,12 +333,13 @@ body {
     display: flex;
     flex-direction: column;
     align-self: center;
-    padding: 0 6rem;
-    width: 40%; }
+    padding: 0px 6rem;
+    width: 40%;
+    margin: 0 auto; }
   .section2__btn {
     align-self: flex-start;
     margin-top: 2rem;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 2rem;
     background-color: #094ccc;
     color: #fff;
     text-transform: uppercase;
@@ -345,7 +348,8 @@ body {
     cursor: pointer;
     transition: 0.3s;
     font-weight: 300;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    width: 100%; }
   .section2__btn:hover {
     background-color: #003099; }
   .section2__heading {
@@ -364,3 +368,57 @@ body {
     font-size: 1.3rem;
     font-weight: 300;
     color: #242424; }
+
+.section-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+  margin-bottom: 10rem; }
+  .section-3__item {
+    background-color: #fff;
+    padding-bottom: 3rem;
+    position: relative;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .section-3__ul {
+    width: 100%;
+    padding: 3rem 3rem; }
+  .section-3__li {
+    text-align: center;
+    list-style-type: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #302f2f;
+    padding: 1rem; }
+  .section-3__li:not(:first-of-type) {
+    border-top: 1px solid #e4e4e4; }
+  .section-3__img {
+    width: 100%;
+    max-height: 20rem;
+    object-fit: cover; }
+  .section-3__btn {
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -1.2rem);
+    left: 50%;
+    padding: 1.5rem 0;
+    background-color: #202020;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    border: none;
+    width: 80%; }
+  .section-3__btn-2 {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: none;
+    background-color: #0b4dcd;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    cursor: pointer; }
+  .section-3__btn-2:hover {
+    background-color: #003099; }

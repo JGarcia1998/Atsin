@@ -15,7 +15,7 @@
 .section__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-  grid-template-rows: repeat(auto-fill, 10vh);
+  grid-template-rows: repeat(auto-fit, 10vh);
   grid-gap: 2rem;
   margin-bottom: 10rem;
 }
@@ -95,7 +95,7 @@
 
   &__img-2 {
     width: 100%;
-    max-height: 20rem;
+    max-height: 25rem;
     object-fit: cover;
   }
 
@@ -110,7 +110,7 @@
     display: inline-block;
     min-width: 50%;
     object-fit: cover;
-    max-height: 30rem;
+    max-height: 25rem;
   }
 
   &__btn {
