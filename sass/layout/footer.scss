@@ -1,0 +1,28 @@
+.footer {
+  min-height: 25rem;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+  }
+
+  &__items {
+    font-size: 2rem;
+    color: #fff;
+    margin: 2rem;
+    font-weight: 300;
+    display: block;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 2px;
+  }
+
+  &__items:hover {
+    background-color: rgb(112, 112, 112);
+    transform: translateY(-0.3rem);
+  }
+}
