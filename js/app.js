@@ -1,4 +1,4 @@
-let min = window.matchMedia("(max-width: 51em)");
+let min = window.matchMedia("(max-width: 37.5em)");
 
 document
   .querySelector(".sidebar__label")
@@ -9,7 +9,7 @@ document
       document.querySelector(".sidebar__label").style.left = "-8rem";
     } else {
       if (min.matches) {
-        document.querySelector(".sidebar").style.width = "40vw";
+        document.querySelector(".sidebar").style.width = "50vw";
         document.querySelector(".sidebar__label").style.top = "50%";
         document.querySelector(".sidebar__label").style.left = "-2.5rem";
       } else {
