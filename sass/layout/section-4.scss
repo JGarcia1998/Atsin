@@ -1,0 +1,124 @@
+.mod-container {
+  margin-bottom: 15rem;
+  display: flex;
+  justify-content: space-around;
+
+  &__title {
+    font-size: 3rem;
+    color: rgb(51, 51, 51);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  &__small {
+    font-size: 1.5rem;
+    color: rgb(131, 129, 129);
+    position: relative;
+  }
+
+  &__small::before {
+    content: "";
+    position: absolute;
+    left: -2rem;
+    width: 2px;
+    height: 100%;
+    background-color: blue;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+
+  &__bg-border {
+    border: 0.8rem solid white;
+    width: 32rem;
+    height: 35rem;
+    position: relative;
+  }
+
+  &__main-form {
+    position: absolute;
+    top: 3rem;
+    width: 32rem;
+    height: 35rem;
+    right: 3rem;
+    background-image: linear-gradient(
+      to bottom,
+      rgb(70, 69, 69),
+      rgb(32, 32, 32)
+    );
+    padding: 3rem;
+    box-shadow: 0 1rem 1rem rgba(black, 0.2);
+  }
+
+  &__form-title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1;
+  }
+  &__contact {
+    color: rgb(177, 177, 177);
+    margin-bottom: 2rem;
+  }
+
+  &__input-container {
+    display: grid;
+
+    grid-gap: 2px;
+    grid-template-areas:
+      "email hike"
+      "dropdown dropdown"
+      "btn btn";
+  }
+
+  &__footer {
+    text-align: center;
+    color: rgb(212, 212, 212);
+    margin-top: 3rem;
+    font-size: 1.2rem;
+  }
+
+  &__anchor {
+    color: rgb(68, 93, 233);
+  }
+
+  &__hike {
+    grid-area: hike;
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    outline: none;
+  }
+
+  &__email {
+    grid-area: email;
+    padding: 1rem 2rem;
+    width: 100%;
+    outline: none;
+  }
+
+  &__dropdown {
+    grid-area: dropdown;
+    padding: 1rem 2rem;
+    outline: none;
+  }
+
+  &__btn {
+    grid-area: btn;
+    padding: 1rem 2rem;
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(68, 93, 233),
+      rgb(12, 47, 247)
+    );
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+}

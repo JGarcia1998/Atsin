@@ -1,3 +1,5 @@
+let min = window.matchMedia("(max-width: 51em)");
+
 document
   .querySelector(".sidebar__label")
   .addEventListener("click", function () {
@@ -6,9 +8,15 @@ document
       document.querySelector(".sidebar__label").style.top = "5rem";
       document.querySelector(".sidebar__label").style.left = "-8rem";
     } else {
-      document.querySelector(".sidebar").style.width = "25vw";
-      document.querySelector(".sidebar__label").style.top = "50%";
-      document.querySelector(".sidebar__label").style.left = "-2.5rem";
+      if (min.matches) {
+        document.querySelector(".sidebar").style.width = "40vw";
+        document.querySelector(".sidebar__label").style.top = "50%";
+        document.querySelector(".sidebar__label").style.left = "-2.5rem";
+      } else {
+        document.querySelector(".sidebar").style.width = "25vw";
+        document.querySelector(".sidebar__label").style.top = "50%";
+        document.querySelector(".sidebar__label").style.left = "-2.5rem";
+      }
     }
   });
 

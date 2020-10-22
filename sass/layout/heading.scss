@@ -16,9 +16,49 @@
 
   &__items {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 10%;
     transform: translateY(-50%);
+  }
+
+  &__title {
+    letter-spacing: 3px;
+    font-weight: 300;
+    font-size: 4rem;
+    display: block;
+    float: left;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    color: #fff;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: -1.2rem;
+    right: -2.5rem;
+    font-size: 3.5rem;
+  }
+
+  &__btn {
+    margin-top: 2rem;
+    font-family: "Lato";
+    letter-spacing: 1px;
+    border-radius: 2px;
+    background-color: rgb(14, 83, 212);
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    width: 13rem;
+    height: 3.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  &__btn:hover {
+    background-color: rgb(2, 64, 179);
   }
 
   &__heading {
